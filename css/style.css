@@ -17,6 +17,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f8f8f8; /* Um fundo suave */
+    padding-top: 0;
 }
 
 /* Seção com padding padrão */
@@ -87,15 +88,15 @@ p {
 
 /* --- Estilos do Header (Hero Section) --- */
 .hero-section {
-    background: url('../imagens/coffee-beans-bg.jpg') no-repeat center center/cover;
+    background: url('../imagens/coffee-beans-bg-optimized.jpg') no-repeat center center/cover;
     height: 100vh; /* Ocupa a altura total da tela */
     display: flex;
     flex-direction: column; /*Para alinhar o nav e o conteúdo */
-    justify-content: space-between; /* Empurra o nav para cima e o conteúdopara o centro/baixo */
     color: #fff;
     text-align: center;
     position: relative;
     z-index: 1; /*Para garantir que o conteúdo fique acima do overplay */
+    padding-top: 100px;
 }
 
 /* Overplay para escurecer a imagem de fundo e melhorar a legibilidade */
@@ -117,25 +118,32 @@ p {
     justify-content: center; /* Centraliza o conteúdo verticalmente */
     align-items: center; /* Centraliza o conteúdo horizontalmente */
     padding-bottom: 100px; /* Espaço para o rodapé ou parte de baixo */
+    margin-top: 100px;
 }
 
 .hero-content p {
     font-size: 1.2em;
     max-width: 600px;
     margin: 20px auto;
+    padding-top: 100px;
 }
 
 /* --- Estilos da Navbar --- */
 .navbar {
     width: 100%;
-    padding: 20px 0;
-    background-color: rgba(0, 0, 0, 0.3); /*Fundo semi-transparente */
+    padding: 20px 50px;
+    background-color: #2c3e50; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky; /* Navbar fixa ao rolar */
+    position: fixed; /* Navbar fixa ao rolar */
     top: 0;
     z-index: 1000; /* Garante que a navbar fique acima de tudo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+section[id] {
+    scroll-margin-top: 100px;
 }
 
 .navbar .logo {
@@ -562,6 +570,22 @@ footer .container {
 
     .hero-content p {
         font-size: 1em;
+    }
+
+    .hero-content {
+        padding-top: 150px;
+        padding-bottom: 50px;
+    }
+
+    .hero-section {
+        height: auto;
+        min-height: 500px;
+        padding-top: 150px;
+    }
+
+
+    section[id] {
+    scroll-margin-top: 150px;
     }
 
     .navbar {
